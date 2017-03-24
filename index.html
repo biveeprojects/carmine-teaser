@@ -29,6 +29,9 @@
         padding: 30px 0px;
         margin-top: 50px;
       }
+      img {
+        max-width: 100%; /* this will make images fluid, shrinking to the width of their containers if smaller than their original size */
+      }
       img.logo {
         width:450px;
         padding:30px 50px;
@@ -37,11 +40,44 @@
       aside.wrapper {
         margin: 90px 0;
       }
-       .feature-list li {
-        display: block;
-        float: left;
-        padding: 10px;
+
+      /* --- feature grid --- */
+      .feature-list {
+        font-size: 0; /* fixes a whitespace bug in inline-block */
+        list-style: none;
+        margin: -10px; /* compensates for the gutters around the grid items */
+
+        @supports (display: flex) {
+          display: flex;
+        }
       }
+       .feature-list > li {
+        display: inline-block; /* inline-block, in this case, is less troublesome than floats */
+        font-size: 16px; /* restore the font size, which we zeroed out in the parent */
+        font-size: 1rem;
+        padding: 10px;
+        width: 100%; /* set the grid item width to 100% by default, so they will stack in one col on phones */
+        text-align: center;
+        vertical-align: top;
+
+        @supports (display: flex) {
+          flex: 0 0 auto;
+        }
+      }
+      /* 2 columns (half-width) at 480px screens (largeish phone) */
+      @media screen and (min-width: 30em) {
+        .feature-list li {
+          width: 50%;
+        }
+      }
+      /* 4 columns (quarter-width) at 800px screens (tablet and up) */
+      @media screen and (min-width: 50em) {
+        .feature-list li {
+          width: 25%;
+        }
+      }
+      /* ^ adjust and add media queries as needed to adjust sizing of the grid */
+
       /* divs */
       .wrapper {
         text-align: center;
@@ -57,7 +93,9 @@
       }
       .description {
         width: 150px;
-        margin:10px;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
       }
       .button-secondary {
         padding:15px;
@@ -86,32 +124,33 @@
   			<div>
   				<ul class="feature-list">
   					<li>
-  						<img src="http://placehold.it/120x120" alt="icon">
-  						<div class="description">Addressing a diversity of training needs</div>
+  						<img src="http://placehold.it/200x200" alt="icon">
+              <!-- I suggest making these p tags, since it's just text -->
+  						<p class="description">Addressing a diversity of training needs</p>
   					</li>
   					<li>
-  						<img src="http://placehold.it/120x120" alt="icon">
-  						<div class="description">Reaching a larger audience of entry- and mid-level staff</div>
+  						<img src="http://placehold.it/200x200" alt="icon">
+  						<p class="description">Reaching a larger audience of entry- and mid-level staff</p>
   					</li>
   					<li>
-  						<img src="http://placehold.it/120x120" alt="icon">
-  						<div class="description">Improving training logistics and efficiencies</div>
+  						<img src="http://placehold.it/200x200" alt="icon">
+  						<p class="description">Improving training logistics and efficiencies</p>
   					</li>
   					<li>
-  						<img src="http://placehold.it/120x120" alt="icon">
-  						<div class="description">Reducing workplace time and opportunity costs</div>
+  						<img src="http://placehold.it/200x200" alt="icon">
+  						<p class="description">Reducing workplace time and opportunity costs</p>
   					</li>
   					<li>
-  						<img src="http://placehold.it/120x120" alt="icon">
-  						<div class="description">Accessing a community to share knowledge and ideas</div>
+  						<img src="http://placehold.it/200x200" alt="icon">
+  						<p class="description">Accessing a community to share knowledge and ideas</p>
   					</li>
   					<li>
-  						<img src="http://placehold.it/120x120" alt="icon">
-  						<div class="description">Increasing brand recognition across the industry</div>
+  						<img src="http://placehold.it/200x200" alt="icon">
+  						<p class="description">Increasing brand recognition across the industry</p>
   					</li>
   					<li>
-  						<img src="http://placehold.it/120x120" alt="icon">
-  						<div class="description">Gaining expertise in developing online courses</div>
+  						<img src="http://placehold.it/200x200" alt="icon">
+  						<p class="description">Gaining expertise in developing online courses</p>
   					</li>
   				</ul>
   			</div>
