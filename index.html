@@ -9,17 +9,15 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <style>
-
       * {
         box-sizing: border-box;
         margin: 0 auto;
         max-width: 800px;
       }
-      .button-primary {
+      a.button-primary {
         padding: 15px 30px;
         border: 1px solid black;
         margin: 10px 0;
-
       }
       header p {
         margin-bottom: 25px;
@@ -36,33 +34,35 @@
         padding:30px 50px;
         margin-top: 50px;
       }
-      .wrapper {
-        text-align: center;
+      aside.wrapper {
+        margin: 90px 0;
       }
-
-      .blurb {
-        padding: 5px 50px;
-      }
-      
-      .feature-list li {
+       .feature-list li {
         display: block;
         float: left;
         padding: 10px;
+      }
+      /* divs */
+      .wrapper {
+        text-align: center;
+      }
+      .blurb {
+        padding: 5px 50px;
+      }
+      .contact{
+        padding: 30px 0;
+      }
+      .button-div {
+        margin: 20px 0;
       }
       .description {
         width: 150px;
         margin:10px;
       }
-
-      .button-div {
-        margin: 20px 0;
-      }
-
-      aside.wrapper {
-        margin: 90px 0;
-      }
-      .contact{
-        padding: 30px 0;
+      .button-secondary {
+        padding:15px;
+        border: 1px solid black;
+        margin: 10px 0;
       }
       
     </style>
@@ -127,9 +127,11 @@
   			<div class="contact">
           <!-- Email button -->
   				<h1>Talk to us</h1>
-  					<a href="#">Send us an email for more information</a>
-  					<img src="http://placehold.it/25/25">
-  					<span>support@gateway.academy</span>
+            <div class="button-secondary">
+  					 <a href="#">Send us an email for more information</a>
+  					 <img src="http://placehold.it/25/25">
+  					 <span>support@gateway.academy</span>
+            </div>
   			</div>
   			<div class="contact">
           <!-- Subscribe form -->
