@@ -17,16 +17,19 @@
       a.button-primary {
         padding: 15px 30px;
         border: 1px solid black;
-        margin: 10px 0;
+        margin: 10px;
+      }
+      footer {
+        margin: 0px 10px 25px;
       }
       header p {
         margin-bottom: 25px;
       }
       h1.intro {
-        padding:25px 0px;
+        padding:25px 50px;
       }
       h1.feature {
-        padding: 30px 0px;
+        padding: 30px 50px;
         margin-top: 50px;
       }
       img {
@@ -36,6 +39,9 @@
         width:450px;
         padding:30px 50px;
         margin-top: 50px;
+      }
+      img.contributors {
+        margin: 20px 50px;
       }
       aside.wrapper {
         margin: 90px 0;
@@ -84,7 +90,7 @@
       .wrapper {
         text-align: center;
       }
-      .blurb {
+      .text {
         padding: 5px 50px;
       }
       .contact{
@@ -102,7 +108,7 @@
       .button-secondary {
         padding:15px;
         border: 1px solid black;
-        margin: 10px 0;
+        margin: 10px;
       }
       
     </style>
@@ -110,11 +116,11 @@
   <body>
   	<article>
 
-      <!-- Billboard with logo and blurbs -->
+      <!-- Billboard with logo and texts -->
     	<header class="wrapper">
     		<img class="logo" src="http://placehold.it/600x300">
     		<h1 class="intro"><strong>Gateway Academy</strong> is a curated learning platform offering both online and blended learning courses.</h1>
-        <div class="blurb">
+        <div class="text">
     		  <p>It will cultivate communities focused on financial inclusion in Sub-Saharan Africa.</p>
     		  <p>Gateway Academy is partnering with leading training, content, and financial service providers to address training and knowledge gaps through relevant online and blended courses. These courses will augment and build upon existing financial inclusion training.</p>
         </div>
@@ -177,16 +183,16 @@
   			<div class="contact">
           <!-- Subscribe form -->
   				<h1>Hear from us</h1>
-  				<p>Subscribe to our newsletter for more information</p>
+  				<p>Subscribe to our newsletter for more information</p><br>
   				<form>
-  					Email address<br>
+  					<small>Email address</small><br>
   					<input type="text" name="email"><br>
-  				  	First name<br>
+  				  	<small>First name</small><br>
   				 	<input type="text" name="firstname"><br>
-  				  	Last name<br>
+  				  	<small>Last name</small><br>
   				  	<input type="text" name="lastname"><br>
-  				  	Country<br>
-  				  	<input type="text" name="country"><br>
+  				  	<small>Country</small><br>
+  				  	<input type="text" name="country"><br><br>
   				  	<button type="submit">Submit</button>
   				</form>
   			</div>
@@ -194,10 +200,12 @@
   	</article>
 
     <!-- Affiliate logos & copyright -->
-  	<footer>
-  		<p>The Gateway Academy is a partnership between</p>
-  		<img src="http://placehold.it/120x120" alt="Mastercard logo">
-  		<img src="http://placehold.it/120x120" alt="CGAP logo">
+  	<footer class="wrapper">
+  		<p class="text">The Gateway Academy is a partnership between</p>
+  		<div>
+        <img class="contributors" src="http://placehold.it/120x120" alt="Mastercard logo">
+  		  <img class="contributors" src="http://placehold.it/120x120" alt="CGAP logo">
+      </div>
   		<aside>
         <small>Copyright text lorem ipsum. All rights reserved.</small>
       </aside>
