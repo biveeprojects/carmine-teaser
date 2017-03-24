@@ -47,6 +47,7 @@
         list-style: none;
         margin: -10px; /* compensates for the gutters around the grid items */
 
+        /* use flexbox layout if the browser supports it -- works better */
         @supports (display: flex) {
           display: flex;
         }
@@ -60,6 +61,7 @@
         text-align: center;
         vertical-align: top;
 
+        /* use flexbox layout if the browser supports it */
         @supports (display: flex) {
           flex: 0 0 auto;
         }
