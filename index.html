@@ -9,71 +9,129 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <style>
-        /* Add CSS here */
+
+      * {
+        box-sizing: border-box;
+        margin: 0 auto;
+        max-width: 800px;
+      }
+      .button-primary {
+        padding: 15px 30px;
+        border: 1px solid black;
+        margin: 10px 0;
+
+      }
+      header p {
+        margin-bottom: 25px;
+      }
+      h1.intro {
+        padding:25px 0px;
+      }
+      h1.feature {
+        padding: 30px 0px;
+        margin-top: 50px;
+      }
+      img.logo {
+        width:450px;
+        padding:30px 50px;
+        margin-top: 50px;
+      }
+      .wrapper {
+        text-align: center;
+      }
+
+      .blurb {
+        padding: 5px 50px;
+      }
+      
+      .feature-list li {
+        display: block;
+        float: left;
+        padding: 10px;
+      }
+      .description {
+        width: 150px;
+        margin:10px;
+      }
+
+      .button-div {
+        margin: 20px 0;
+      }
+
+      aside.wrapper {
+        margin: 90px 0;
+      }
+      .contact{
+        padding: 30px 0;
+      }
+      
     </style>
   </head>
   <body>
   	<article>
 
       <!-- Billboard with logo and blurbs -->
-    	<header>
-    		<img src="http://placehold.it/600x300">
-    		<h1><strong>Gateway Academy</strong> is a curated learning platform offering both online and blended learning courses.</h1>
-    		<p>It will cultivate communities focused on financial inclusion in Sub-Saharan Africa.</p>
-    		<p>Gateway Academy is partnering with leading training, content, and financial service providers to address training and knowledge gaps through relevant online and blended courses. These courses will augment and build upon existing financial inclusion training.</p>
+    	<header class="wrapper">
+    		<img class="logo" src="http://placehold.it/600x300">
+    		<h1 class="intro"><strong>Gateway Academy</strong> is a curated learning platform offering both online and blended learning courses.</h1>
+        <div class="blurb">
+    		  <p>It will cultivate communities focused on financial inclusion in Sub-Saharan Africa.</p>
+    		  <p>Gateway Academy is partnering with leading training, content, and financial service providers to address training and knowledge gaps through relevant online and blended courses. These courses will augment and build upon existing financial inclusion training.</p>
+        </div>
     	</header>
 	     
       <!-- Feature list -->
-  		<section>
-  			<h1>Partnering with CGAP on Gateway Academy has a number of benefits, including:</h1>
+  		<section class="wrapper">
+  			<h1 class="feature">Partnering with CGAP on Gateway Academy has a number of benefits, including:</h1>
   			<div>
-  				<ul>
+  				<ul class="feature-list">
   					<li>
-  						<img src="http://placehold.it/200x200" alt="icon">
-  						<p>Addressing a diversity of training needs</p>
+  						<img src="http://placehold.it/120x120" alt="icon">
+  						<div class="description">Addressing a diversity of training needs</div>
   					</li>
   					<li>
-  						<img src="http://placehold.it/200x200" alt="icon">
-  						<p>Reaching a larger audience of entry- and mid-level staff</p>
+  						<img src="http://placehold.it/120x120" alt="icon">
+  						<div class="description">Reaching a larger audience of entry- and mid-level staff</div>
   					</li>
   					<li>
-  						<img src="http://placehold.it/200x200" alt="icon">
-  						<p>Improving training logistics and efficiencies</p>
+  						<img src="http://placehold.it/120x120" alt="icon">
+  						<div class="description">Improving training logistics and efficiencies</div>
   					</li>
   					<li>
-  						<img src="http://placehold.it/200x200" alt="icon">
-  						<p>Reducing workplace time and opportunity costs</p>
+  						<img src="http://placehold.it/120x120" alt="icon">
+  						<div class="description">Reducing workplace time and opportunity costs</div>
   					</li>
   					<li>
-  						<img src="http://placehold.it/200x200" alt="icon">
-  						<p>Accessing a community to share knowledge and ideas</p>
+  						<img src="http://placehold.it/120x120" alt="icon">
+  						<div class="description">Accessing a community to share knowledge and ideas</div>
   					</li>
   					<li>
-  						<img src="http://placehold.it/200x200" alt="icon">
-  						<p>Increasing brand recognition across the industry</p>
+  						<img src="http://placehold.it/120x120" alt="icon">
+  						<div class="description">Increasing brand recognition across the industry</div>
   					</li>
   					<li>
-  						<img src="http://placehold.it/200x200" alt="icon">
-  						<p>Gaining expertise in developing online courses</p>
+  						<img src="http://placehold.it/120x120" alt="icon">
+  						<div class="description">Gaining expertise in developing online courses</div>
   					</li>
   				</ul>
   			</div>
-  			<div>
+        <br style="clear:both">
+  			<div class="button-div">
           <!-- Blog button, linking to Medium -->
-  				<a href="#">To learn more, visit our blog</a>
+  				<a class="button-primary" href="#">To learn more, visit our blog</a>
   			</div>
   		</section>
 	     
       <!-- Contact stuff -->
-  		<aside>
-  			<div>
+  		<aside class="wrapper">
+  			<div class="contact">
           <!-- Email button -->
   				<h1>Talk to us</h1>
   					<a href="#">Send us an email for more information</a>
   					<img src="http://placehold.it/25/25">
   					<span>support@gateway.academy</span>
   			</div>
-  			<div>
+  			<div class="contact">
           <!-- Subscribe form -->
   				<h1>Hear from us</h1>
   				<p>Subscribe to our newsletter for more information</p>
@@ -94,9 +152,9 @@
 
     <!-- Affiliate logos & copyright -->
   	<footer>
-  		<p>The Gateway Academy is a partnership  between</p>
-  		<img src="http://placehold.it/200x100" alt="Mastercard logo">
-  		<img src="http://placehold.it/200x100" alt="CGAP logo">
+  		<p>The Gateway Academy is a partnership between</p>
+  		<img src="http://placehold.it/120x120" alt="Mastercard logo">
+  		<img src="http://placehold.it/120x120" alt="CGAP logo">
   		<aside>
         <small>Copyright text lorem ipsum. All rights reserved.</small>
       </aside>
