@@ -12,13 +12,15 @@
       * {
         box-sizing: border-box;
         margin: 0 auto;
-        max-width: 800px;
         font-family: "Lato", "Helvetica", sans-serif;
         text-align:center;
       }
-      
+      .max-width {
+      	max-width: 800px;
+      }
       header {
       	background-color: #084370;
+      	padding-bottom: 50px;
       }
       header p {
         margin-bottom: 25px;
@@ -27,35 +29,34 @@
         color: #FFF;
       }
       aside.wrapper {
-        margin: 90px;
+        margin: 90px auto;
         background-color: #084370;
         color: white;
       }
       footer {
-        margin: -25px 10px 25px;
+        margin: -25px auto 45px;
       }
       a {
       	color: #FFF;
       }
       .button-primary {
         padding: 15px 30px;
-        margin: 10px;
+        margin: 10px auto;
         border-radius: 15px;
         font-size: 18px;
         font-weight: 500;
         text-decoration: none;
-        color: #FFF;
         background-color: #E17A1B;
       }
       .intro {
         padding: 25px 50px;
+        margin: auto;
         font-weight: 300;
         font-size: 36px;
         color: #FFF;
       }
       .thin {
-        padding: 30px 50px;
-        margin-top: 50px;
+        padding: 0px 30px 50px;
         font-size: 36px;
         font-weight: 200;
       }
@@ -64,7 +65,7 @@
       	margin-bottom: -10px;
       }
       form {
-      	margin: 20px 0 50px;
+      	margin: 20px auto 50px;
       }
       img {
         max-width: 100%; /* this will make images fluid, shrinking to the width of their containers if smaller than their original size */
@@ -128,7 +129,7 @@
         padding: 20px 10px;
       }
       .button-div {
-        margin: 20px 0;
+        margin: 20px auto;
       }
       .description {
         width: 150px;
@@ -137,7 +138,7 @@
         margin-right: auto;
       }
       .button-secondary {
-        margin:10px;
+        margin:10px auto;
         padding:15px;
         border: 2px solid white;
         border-radius: 15px;
@@ -152,15 +153,15 @@
       <!-- Billboard with logo and texts -->
     	<header class="wrapper">
     		<img class="logo" src="http://placehold.it/600x300">
-    		<h1 class="intro"><strong>Gateway Academy</strong> is a curated learning platform offering both online and blended learning courses.</h1>
-        <div class="text">
+    		<h1 class="intro max-width"><strong>Gateway Academy</strong> is a curated learning platform offering both online and blended learning courses.</h1>
+        <div class="text max-width">
     		  <p>It will cultivate communities focused on financial inclusion in Sub-Saharan Africa.</p>
     		  <p>Gateway Academy is partnering with leading training, content, and financial service providers to address training and knowledge gaps through relevant online and blended courses. These courses will augment and build upon existing financial inclusion training.</p>
         </div>
     	</header>
 	     
       <!-- Feature list -->
-  		<section class="wrapper">
+  		<section class="wrapper max-width">
   			<h1 class="thin">Partnering with CGAP on Gateway Academy has a number of benefits, including:</h1>
   			<div>
   				<ul class="feature-list">
@@ -204,16 +205,16 @@
 	     
       <!-- Contact stuff -->
   		<aside class="wrapper">
-  			<div class="contact">
+  			<div class="contact max-width">
           <!-- Email button -->
   				<h1 class="thin rev">Talk to us</h1>
-            <div class="button-secondary">
+            <div class="button-secondary max-width">
   					 <a href="#">Send us an email for more information</a>
   					 <img src="http://placehold.it/25/25">
   					 <span>support@gateway.academy</span>
             </div>
   			</div>
-  			<div class="contact">
+  			<div class="contact max-width">
           <!-- Subscribe form -->
   				<h1 class="thin rev">Hear from us</h1>
   				<p>Subscribe to our newsletter for updates</p><br>
@@ -233,7 +234,7 @@
   	</article>
 
     <!-- Affiliate logos & copyright -->
-  	<footer class="wrapper">
+  	<footer class="wrapper max-width">
   		<p>The Gateway Academy is a partnership between</p>
   		<div>
         <img class="contributors" src="http://placehold.it/120x120" alt="Mastercard logo">
