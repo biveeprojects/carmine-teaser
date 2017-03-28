@@ -120,6 +120,11 @@
         margin: 20px 50px;
       }
       
+      footer img {
+      	display: inline block;
+      	width: 120px;
+      	margin: 20px;
+      }
 
       /* --- feature grid --- */
       .feature-list {
@@ -260,7 +265,7 @@
 
       <!-- Billboard with logo and texts -->
     	<header class="wrapper">
-    		<img class="logo" src="images/logo-GA.png">
+    		<img class="logo" src="images/logos/logo-GA.png">
     		<h1 class="intro max-width"><strong>Gateway Academy</strong> seeks to create a transformative impact on financial inclusion by increasing the reach of high-quality training content. </h1>
         <div class="text max-width">
     		  <p>Gateway Academy is a curated learning platform that offers both online and blended learning courses, as well as cultivate communities of practice, focused on financial inclusion in Sub-Saharan Africa. To achieve our goal, we are developing key partnerships with financial service providers and leading training and content providers to identify training and knowledge gaps in the market and address them by offering relevant courses.</p>
@@ -404,9 +409,18 @@
   	<footer class="wrapper max-width">
   		<p>The Gateway Academy is a partnership between</p>
   		<div>
-        <img class="contributors" src="http://placehold.it/120x120" alt="Mastercard logo">
-  		  <img class="contributors" src="http://placehold.it/120x120" alt="CGAP logo">
-      </div>
+  		<picture>
+  		  <!--[if IE 9]><video style="display: none;"><![endif]-->
+  		  <source type="image/svg+xml" srcset="images/logos/mcf.svg">
+  		  <!--[if IE 9]></video><![endif]-->
+  		  <img src="images/logos/mcf.png" alt="Mastercard" title="Mastercard Logo">
+  		</picture>  		  
+  		<picture>
+  		  <!--[if IE 9]><video style="display: none;"><![endif]-->
+  		  <source type="image/svg+xml" srcset="images/logos/cgap.svg">
+  		  <!--[if IE 9]></video><![endif]-->
+  		  <img src="images/logos/cgap.png" alt="CGAP" title="CGAP Logo">
+  		</picture>       </div>
   		<aside>
         <small>Copyright text lorem ipsum. All rights reserved.</small>
       </aside>
