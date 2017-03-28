@@ -268,7 +268,44 @@
         color: inherit;
         font-family: inherit;
         font-size: inherit;
-      }      
+      }
+      /* JS form error styles */
+      .form-error {
+        margin-top: 1.5625em;
+        padding: 0.78125em;
+        background: #D84D4D;
+        color: #fff;
+        position: fixed;
+        min-width: 350px;
+        left: 50%;
+        bottom: 1.5625em;
+        transform: translate3d(-50%, 0, 0);
+        -webkit-transform: translate3d(-50%, 0, 0);
+        z-index: 999;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+      }
+      /* JS form success styles */
+      .form-success {
+        margin-top: 1.5625em;
+        padding: 0.78125em;
+        background: #1DC020;
+        color: #fff;
+        position: fixed;
+        min-width: 350px;
+        left: 50%;
+        bottom: 1.5625em;
+        transform: translate3d(-50%, 0, 0);
+        -webkit-transform: translate3d(-50%, 0, 0);
+        z-index: 999;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+      }
+      /* JS form error styles */
+      .attempted-submit .field-error {
+        border-color: #D84D4D !important;
+      }
+
     </style>
   </head>
   <body>
@@ -385,7 +422,7 @@
               Send us an email for more information
             </a>
             <div class="button button-secondary">
-              <input class="form-input form-input-invisible" type="text" value="support@gateway.academy" size="23" readonly>
+              <input class="form-input form-input-invisible" type="text" value="support@gateway.academy" size="25" readonly>
             </div>
           </div>
   			</div>
@@ -395,23 +432,28 @@
           <!-- Subscribe form -->
   				<h1 class="thin rev">Hear from us</h1>
   				<p>Subscribe to our newsletter for updates</p>
-  				<form style="padding-top: 1em;">
+  				<form action="//academy.us15.list-manage.com/subscribe/post?u=772b5bf19d318fdf697d56176&amp;id=0aca6e5c39" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate style="padding-top: 1em;">
   					<div class="form-group">
-              <label for="email">Email address</label>
-              <input type="text" name="email" id="email">
+              <label for="mce-EMAIL">Email address</label>
+              <input class="validate-required validate-email required email" id="mce-EMAIL" name="EMAIL" type="email" required="">
             </div>
 				  	<div class="form-group">
-              <label for="firstname">First name</label>
-              <input type="text" name="firstname" id="firstname">
+              <label for="mce-FNAME">First name</label>
+              <input id="mce-FNAME" name="FNAME" type="text">
             </div>
 				  	<div class="form-group">
-              <label for="lastname">Last name</label>
-              <input type="text" name="lastname" id="lastname">
+              <label for="mce-LNAME">Last name</label>
+              <input id="mce-LNAME" name="LNAME" type="text">
             </div>
 				  	<div class="form-group">
-              <label for="country">Country</label>
-              <input type="text" name="country" id="country">
+              <label for="mce-COUNTRY">Country</label>
+              <input id="mce-COUNTRY" name="COUNTRY" type="text">
             </div>
+            <div id="mce-responses" class="clear">
+              <div class="response" id="mce-error-response" style="display:none"></div>
+              <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_772b5bf19d318fdf697d56176_0aca6e5c39" tabindex="-1" value=""></div>
 				  	<button class="button button-reverse" type="submit" style="margin-top: 1.5em;">Subscribe</button>
   				</form>
   			</div>
@@ -435,8 +477,11 @@
   		  <img src="images/logos/cgap.png" alt="CGAP" title="CGAP Logo">
   		</picture>       </div>
   		<aside>
-        <small>Copyright text lorem ipsum. All rights reserved.</small>
+        <small>Copyright 2017. All rights reserved.</small>
       </aside>
   	</footer>
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
