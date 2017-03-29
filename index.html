@@ -20,6 +20,11 @@
       .max-width {
       	max-width: 800px;
       }
+      /* add gutters on either side */
+      .gutters {
+        padding-left: 1.4em;
+        padding-right: 1.4em;
+      }
       header {
       	background: #CCE8F1;
       	background: linear-gradient(#FFF, #CCE8F1 100%, #084370 200%);
@@ -34,6 +39,8 @@
       }
       aside.wrapper {
         margin: 90px auto;
+        padding-top: 1em;
+        padding-bottom: 1em;
         background-color: #084370;
         color: white;
       }
@@ -87,20 +94,47 @@
 
       /* group of buttons */
       .button-group {
-        margin: auto;
+        display: block;
         font-size: 0;
+        list-style: none;
+        position: relative;
+        margin: auto;
       }
       .button-group .button {
         border-radius: 0;
+        border-bottom-width: 0; /* kill bottom borders on small screens */
         margin: 0;
+        vertical-align: middle;
+        width: 100%;
       }
       .button-group .button:first-child {
         border-top-left-radius: 0.3em;
-        border-bottom-left-radius: 0.3em;
+        border-top-right-radius: 0.3em;
       }
       .button-group .button:last-child {
-        border-top-right-radius: 0.3em;
+        border-bottom-left-radius: 0.3em;
         border-bottom-right-radius: 0.3em;
+        border-bottom-width: 1px;
+      }
+
+      @media screen and (min-width: 43em) {
+        .button-group {
+          display: inline-block;
+        }
+        .button-group .button {
+          width: auto;
+          border-bottom-width: 1px;
+          border-left-width: 0;
+        }
+        .button-group .button:first-child {
+          border-top-right-radius: 0;
+          border-bottom-left-radius: 0.3em;
+          border-left-width: 1px;
+        }
+        .button-group .button:last-child {
+          border-top-right-radius: 0.3em;
+          border-bottom-left-radius: 0;
+        }
       }
       
       .intro {
@@ -328,7 +362,7 @@
       <!-- Feature list -->
   		<section class="wrapper max-width">
   			<h1 class="thin">Gateway Academy is working with a variety of stakeholders and partners, including:</h1>
-  			<div  style="padding: 0 1.4em;">
+  			<div  class="gutters">
   				<ul class="feature-list">
   					<li>
   						<picture>
@@ -337,7 +371,6 @@
                 <!--[if IE 9]></video><![endif]-->
                 <img src="images/icons/symbol-01.png" alt="Banks and banker's associations" title="Banks and banker's associations">
               </picture>
-              <!-- I suggest making these p tags, since it's just text -->
   						<p class="description">Banks and banker's associations</p>
   					</li>
   					<li>
@@ -412,7 +445,7 @@
 	     
       <!-- Contact stuff -->
   		<aside class="wrapper">
-  			<div class="contact max-width">
+  			<div class="max-width gutters">
           <!-- Email button -->
   				<h1 class="thin rev">Talk to us</h1>
           <div class="button-group">
@@ -433,7 +466,7 @@
   			</div>
   			<div class="hairline max-width">
   			</div>
-  			<div class="contact max-width">
+  			<div class="max-width gutters">
           <!-- Subscribe form -->
   				<h1 class="thin rev">Hear from us</h1>
   				<p>Subscribe to our newsletter for updates</p>
