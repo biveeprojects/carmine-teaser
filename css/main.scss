@@ -1,0 +1,400 @@
+ @font-face {
+          font-family: 'proximanova-regular';
+          src: url('fonts/proximanova-regular-webfont.woff2') format('woff2'),
+               url('fonts/proximanova-regular-webfont.woff') format('woff');
+          font-weight: normal;
+          font-style: normal;
+      }
+
+      @font-face {
+          font-family: 'proximanova-light';
+          src: url('fonts/proximanova-light-webfont.woff2') format('woff2'),
+               url('fonts/proximanova-light-webfont.woff') format('woff');
+          font-weight: 200;
+          font-style: normal;
+      }
+
+      @font-face {
+          font-family: 'proximanova-semibold';
+          src: url('fonts/proximanova-semibold-webfont.woff2') format('woff2'),
+               url('fonts/proximanova-semibold-webfont.woff') format('woff');
+          font-weight: bold;
+          font-style: normal;
+      }
+
+      @font-face {
+          font-family: 'proximanova-italic';
+          src: url('fonts/proximanova-regularit-webfont.woff2') format('woff2'),
+               url('fonts/proximanova-regularit-webfont.woff') format('woff');
+          font-weight: normal;
+          font-style: italic;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0 auto;
+        font-family: 'proximanova-regular', 'Helvetica', 'Arial', sans-serif;
+        text-align: center;
+      }
+      .max-width {
+      	max-width: 800px;
+      }
+      h1 {
+      	font-family: 'proximanova-light', 'Helvetica', 'Arial', sans-serif;
+        font-weight: 200;
+      }
+      /* responsive type */
+      @media screen and (min-width: 30em) {
+      	h1 { 
+      		font-size: 18px;
+      		font-size: 1.125rem; 
+    		}
+      	p {
+          font-size: 10px
+      		font-size: 0.625rem;
+        }
+      }
+      @media screen and (min-width: 48em) {
+      	h1 { 
+      		font-size: 24px;
+      		font-size: 1.5rem; 
+    		}
+      	p {
+          font-size: 12px
+      		font-size: 0.75rem;
+        }
+      }
+      @media screen and (min-width: 64em) {
+      	h1 { 
+      		font-size: 36px;
+      		font-size: 2rem; 
+    		}
+      	p {
+          font-size: 18px;
+      		font-size: 1.125rem;
+        }
+      }
+
+      /* heading styles */
+      .intro {
+        padding: 0.7em 1.4em;
+        margin: auto;
+		color: #084370;
+      }
+      .thin {
+        padding: 0px 30px 50px;
+        margin-top: 90px;
+      }
+      /* add gutters on either side */
+      .gutters {
+        padding-left: 1.4em;
+        padding-right: 1.4em;
+      }
+      header {
+      	background: #CCE8F1;
+      	background: linear-gradient(#FFF, #CCE8F1 99.9%, #084370 100%);
+      	padding-bottom: 50px;
+      	color: #084370;
+      }
+      header p {
+        margin-bottom: 0.5em;
+        font-family: 'proximanova-regular', 'Helvetica', 'Arial', sans-serif;
+        font-weight: normal;
+        color: #084370;
+      }
+      aside.wrapper {
+        margin: 90px auto;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        background-color: #084370;
+        color: white;
+      }
+      footer {
+        margin: -25px auto 45px;
+      }
+      a {
+      	color: #FFF;
+      }
+      strong {
+          font-family: 'proximanova-semibold', 'Helvetica', 'Arial', sans-serif;
+          font-weight: bold;
+      }
+     .hairline {
+      	border: 1px solid #0a558f;
+      	margin-top: 50px;
+      	margin-bottom: -10px;
+      }
+
+      /* --- buttons --- */
+      .button {
+        border: 1px solid #084370;
+        box-shadow: none;
+        display: inline-block;
+        padding: 0.5em 1em;
+        border-radius: 0.3em;
+        font-size: 16px;
+        font-size: 1rem;
+        font-family: 'proximanova-semibold', 'Helvetica', 'Arial', sans-serif;
+        font-weight: bold;
+        color: white;
+        background-color: #084370;
+        text-decoration: none;
+        text-shadow: none;
+      }
+      .button-reverse {
+        background-color: white;
+        border-color: white;
+        color: #084370;
+      }
+      .button-primary {
+        padding: 0.8em 1.6em;
+        margin: 0.6em auto;
+        font-size: 18px;
+        font-size: 1.125rem;
+        background-color: #E17A1B;
+        border-color: #E17A1B;
+      }
+      .button-secondary {
+        background-color: transparent;
+        border: 1px solid white;
+      }
+
+      /* group of buttons */
+      .button-group {
+        display: block;
+        font-size: 0;
+        list-style: none;
+        position: relative;
+        margin: auto;
+      }
+      .button-group .button {
+        border-radius: 0;
+        border-bottom-width: 0; /* kill bottom borders on small screens */
+        margin: 0;
+        vertical-align: middle;
+        width: 100%;
+      }
+      .button-group .button:first-child {
+        border-top-left-radius: 0.3em;
+        border-top-right-radius: 0.3em;
+      }
+      .button-group .button:last-child {
+        border-bottom-left-radius: 0.3em;
+        border-bottom-right-radius: 0.3em;
+        border-bottom-width: 1px;
+      }
+
+      @media screen and (min-width: 43em) {
+        .button-group {
+          display: inline-block;
+        }
+        .button-group .button {
+          width: auto;
+          border-bottom-width: 1px;
+          border-left-width: 0;
+        }
+        .button-group .button:first-child {
+          border-top-right-radius: 0;
+          border-bottom-left-radius: 0.3em;
+          border-left-width: 1px;
+        }
+        .button-group .button:last-child {
+          border-top-right-radius: 0.3em;
+          border-bottom-left-radius: 0;
+        }
+      }
+     
+      .rev {
+      	color: white;
+      	margin-bottom: -10px;
+      	margin-top: 50px;
+      }
+      
+      img {
+        max-width: 100%; /* this will make images fluid, shrinking to the width of their containers if smaller than their original size */
+      }
+      img.logo {
+        width: 450px;
+        padding: 30px 50px;
+        margin-top: 50px;
+      }
+      img.contributors {
+        margin: 20px 50px;
+      }
+      
+      footer img {
+      	display: inline block;
+      	width: 120px;
+      	margin: 20px;
+      }
+
+      /* --- feature grid --- */
+      .feature-list {
+        font-size: 0; /* fixes a whitespace bug in inline-block */
+        list-style: none;
+        margin: -10px; /* compensates for the gutters around the grid items */
+        margin-bottom: 90px;
+        padding-left: 0;
+      }
+      /* use flexbox layout if the browser supports it -- works better */
+      @supports (display: flex) {
+        .feature-list {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+        }
+      }
+      .feature-list > li {
+        display: inline-block; /* inline-block, in this case, is less troublesome than floats */
+        font-size: 16px; /* restore the font size, which we zeroed out in the parent */
+        font-size: 1rem;
+        padding: 10px;
+        width: 100%; /* set the grid item width to 100% by default, so they will stack in one col on phones */
+        text-align: center;
+        vertical-align: top;
+      }
+      /* use flexbox layout if the browser supports it */
+      @supports (display: flex) {
+        .feature-list > li {
+          flex: 0 0 auto;
+        }
+      }
+      /* 2 columns (half-width) at 480px screens (largeish phone) */
+      @media screen and (min-width: 30em) {
+        .feature-list > li {
+          width: 50%;
+        }
+      }
+      /* 4 columns (quarter-width) at 800px screens (tablet and up) */
+      @media screen and (min-width: 50em) {
+        .feature-list > li {
+          width: 25%;
+        }
+      }
+      /* ^ adjust and add media queries as needed to adjust sizing of the grid */
+
+      /* divs */
+      .text {
+        padding: 5px 50px;
+        margin-bottom: 40px;
+        color: white;
+      }
+      .contact {
+        padding: 5px 10px;
+      }
+      .button-div {
+        margin: 20px auto;
+      }
+      .description {
+        width: 150px;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* --- form --- */
+
+      form,
+      .form {
+        display: block;
+        margin: 20px auto 50px;
+        max-width: 350px;
+        max-width: 21.875rem;
+      }
+      
+      /* container to group a label and an input */
+      .form-group {
+        display: block;
+        text-align: left;
+      }
+      /* add a margin between all children */
+      .form-group * + * {
+        margin-top: 0.5em;
+      }
+      /* add a margin between neighbors */
+      .form-group + .form-group {
+        margin-top: 1em; 
+      }
+
+      label,
+      .form-label {
+        display: block;
+        text-align: left;
+        font-size: 13px;
+        font-size: 0.8125rem;
+      }
+
+      input,
+      .form-input {
+        background-color: #042D4C;
+        border: 1px solid #042D4C; /* add an 'invisible' border so the focus border doesn't shift the input's position */
+        border-radius: 0.125em;
+        box-shadow: none; /* reset browser default */
+        display: block;
+        font-size: 13px;
+        font-size: 0.8125rem;
+        padding: 0.5em;
+        text-align: left;
+        text-shadow: none; /* reset browser default */
+        transition: all 0.25s ease-in-out; /* animate focus state */
+        width: 100%; /* force it to fill its container */
+      }
+      
+      /* focus state for form elements */
+      input:focus,
+      .form-input:focus {
+        border: 1px solid #E17A1B;
+        outline: 0;/* reset browser default */
+        outline: thin dotted \9; /* fix for IE6-9 */
+        box-shadow: none; /* reset browser default */
+      }
+      
+      /* "invisible" form field */
+      .form-input-invisible {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        width: auto;
+        background-color: transparent !important;
+        border: none !important;
+        border-radius: 0;
+        color: inherit;
+        font-family: inherit;
+        font-size: inherit;
+      }
+      /* JS form error styles */
+      .form-error {
+        margin-top: 1.5625em;
+        padding: 0.78125em;
+        background: #D84D4D;
+        color: #fff;
+        position: fixed;
+        min-width: 350px;
+        left: 50%;
+        bottom: 1.5625em;
+        transform: translate3d(-50%, 0, 0);
+        -webkit-transform: translate3d(-50%, 0, 0);
+        z-index: 999;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+      }
+      /* JS form success styles */
+      .form-success {
+        margin-top: 1.5625em;
+        padding: 0.78125em;
+        background: #1DC020;
+        color: #fff;
+        position: fixed;
+        min-width: 350px;
+        left: 50%;
+        bottom: 1.5625em;
+        transform: translate3d(-50%, 0, 0);
+        -webkit-transform: translate3d(-50%, 0, 0);
+        z-index: 999;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+      }
+      /* JS form error styles */
+      .attempted-submit .field-error {
+        border-color: #D84D4D !important;
+      }
