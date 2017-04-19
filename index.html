@@ -6,22 +6,53 @@
     <title>Gateway Academy</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,700" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
 
     <style>
+      @font-face {
+          font-family: 'proximanova-regular';
+          src: url('fonts/proximanova-regular-webfont.woff2') format('woff2'),
+               url('fonts/proximanova-regular-webfont.woff') format('woff');
+          font-weight: normal;
+          font-style: normal;
+      }
+
+      @font-face {
+          font-family: 'proximanova-light';
+          src: url('fonts/proximanova-light-webfont.woff2') format('woff2'),
+               url('fonts/proximanova-light-webfont.woff') format('woff');
+          font-weight: 200;
+          font-style: normal;
+      }
+
+      @font-face {
+          font-family: 'proximanova-semibold';
+          src: url('fonts/proximanova-semibold-webfont.woff2') format('woff2'),
+               url('fonts/proximanova-semibold-webfont.woff') format('woff');
+          font-weight: bold;
+          font-style: normal;
+      }
+
+      @font-face {
+          font-family: 'proximanova-italic';
+          src: url('fonts/proximanova-regularit-webfont.woff2') format('woff2'),
+               url('fonts/proximanova-regularit-webfont.woff') format('woff');
+          font-weight: normal;
+          font-style: italic;
+      }
+
       * {
         box-sizing: border-box;
         margin: 0 auto;
-        font-family: 'Lato', 'Helvetica', sans-serif;
+        font-family: 'proximanova-regular', 'Helvetica', 'Arial', sans-serif;
         text-align: center;
       }
       .max-width {
       	max-width: 800px;
       }
       h1 {
-      	font-weight: 300;
+      	font-family: 'proximanova-light', 'Helvetica', 'Arial', sans-serif;
+        font-weight: 200;
       }
       /* responsive type */
       @media screen and (min-width: 30em) {
@@ -77,8 +108,9 @@
       	color: #084370;
       }
       header p {
-        margin-bottom: 1.4em;
-        font-weight: 300;
+        margin-bottom: 0.5em;
+        font-family: 'proximanova-regular', 'Helvetica', 'Arial', sans-serif;
+        font-weight: normal;
         color: #084370;
       }
       aside.wrapper {
@@ -95,7 +127,8 @@
       	color: #FFF;
       }
       strong {
-        font-weight: 700;
+          font-family: 'proximanova-semibold', 'Helvetica', 'Arial', sans-serif;
+          font-weight: bold;
       }
      .hairline {
       	border: 1px solid #0a558f;
@@ -112,7 +145,8 @@
         border-radius: 0.3em;
         font-size: 16px;
         font-size: 1rem;
-        font-weight: 700;
+        font-family: 'proximanova-semibold', 'Helvetica', 'Arial', sans-serif;
+        font-weight: bold;
         color: white;
         background-color: #084370;
         text-decoration: none;
@@ -491,7 +525,7 @@
               Send us an email for more information
             </a>
             <div class="button button-secondary">
-              <input class="form-input form-input-invisible" type="text" value="support@gateway.academy" size="23" readonly style="text-align: center;">
+              <input class="form-input form-input-invisible" type="text" value="support@gateway.academy" size="26" readonly style="text-align: center;">
             </div>
           </div>
   			</div>
