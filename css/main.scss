@@ -1,46 +1,57 @@
+/* colors */
+
+$primary-blue: #124473;
+$highlight-orange: #E47424;
+
+/* fonts */
+
+$font-family-regular: 'proximanova-regular', 'Helvetica', 'Arial', sans-serif;
+$font-family-light: 'proximanova-light', 'Helvetica', 'Arial', sans-serif;
+$font-family-semibold: 'proximanova-regular', 'Helvetica', 'Arial', sans-serif;
+$font-family-italic: 'proximanova-italic', 'Helvetica', 'Arial', sans-serif;
+
  @font-face {
-          font-family: 'proximanova-regular';
-          src: url('fonts/proximanova-regular-webfont.woff2') format('woff2'),
-               url('fonts/proximanova-regular-webfont.woff') format('woff');
-          font-weight: normal;
-          font-style: normal;
+ 		font-family: 'proximanova-regular';
+        src: url('fonts/proximanova-regular-webfont.woff2') format('woff2'),
+             url('fonts/proximanova-regular-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
       }
 
-      @font-face {
-          font-family: 'proximanova-light';
-          src: url('fonts/proximanova-light-webfont.woff2') format('woff2'),
-               url('fonts/proximanova-light-webfont.woff') format('woff');
-          font-weight: 200;
-          font-style: normal;
+@font-face {
+        font-family: 'proximanova-light';
+        src: url('fonts/proximanova-light-webfont.woff2') format('woff2'),
+             url('fonts/proximanova-light-webfont.woff') format('woff');
+        font-weight: 200;
+        font-style: normal;
+      }
+@font-face {
+        font-family: 'proximanova-semibold';
+        src: url('fonts/proximanova-semibold-webfont.woff2') format('woff2'),
+             url('fonts/proximanova-semibold-webfont.woff') format('woff');
+        font-weight: bold;
+        font-style: normal;
       }
 
-      @font-face {
-          font-family: 'proximanova-semibold';
-          src: url('fonts/proximanova-semibold-webfont.woff2') format('woff2'),
-               url('fonts/proximanova-semibold-webfont.woff') format('woff');
-          font-weight: bold;
-          font-style: normal;
-      }
-
-      @font-face {
-          font-family: 'proximanova-italic';
-          src: url('fonts/proximanova-regularit-webfont.woff2') format('woff2'),
-               url('fonts/proximanova-regularit-webfont.woff') format('woff');
-          font-weight: normal;
-          font-style: italic;
+@font-face {
+        font-family: 'proximanova-italic';
+        src: url('fonts/proximanova-regularit-webfont.woff2') format('woff2'),
+             url('fonts/proximanova-regularit-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: italic;
       }
 
       * {
         box-sizing: border-box;
         margin: 0 auto;
-        font-family: 'proximanova-regular', 'Helvetica', 'Arial', sans-serif;
+        font-family: $font-family-regular;
         text-align: center;
       }
       .max-width {
       	max-width: 800px;
       }
       h1 {
-      	font-family: 'proximanova-light', 'Helvetica', 'Arial', sans-serif;
+      	font-family: $font-family-light;
         font-weight: 200;
       }
       /* responsive type */
@@ -50,7 +61,7 @@
       		font-size: 1.125rem; 
     		}
       	p {
-          font-size: 10px
+          font-size: 10px;
       		font-size: 0.625rem;
         }
       }
@@ -60,7 +71,7 @@
       		font-size: 1.5rem; 
     		}
       	p {
-          font-size: 12px
+          font-size: 12px;
       		font-size: 0.75rem;
         }
       }
@@ -79,46 +90,54 @@
       .intro {
         padding: 0.7em 1.4em;
         margin: auto;
-		color: #084370;
+		color: $primary-blue;
       }
+
       .thin {
         padding: 0px 30px 50px;
         margin-top: 90px;
       }
+
       /* add gutters on either side */
       .gutters {
         padding-left: 1.4em;
         padding-right: 1.4em;
       }
+
       header {
       	background: #CCE8F1;
-      	background: linear-gradient(#FFF, #CCE8F1 99.9%, #084370 100%);
+      	background: linear-gradient(#FFF, #CCE8F1 99.9%, $primary-blue 100%);
       	padding-bottom: 50px;
-      	color: #084370;
-      }
-      header p {
-        margin-bottom: 0.5em;
-        font-family: 'proximanova-regular', 'Helvetica', 'Arial', sans-serif;
-        font-weight: normal;
-        color: #084370;
-      }
+      	color: $primary-blue;
+      	
+      	p {
+	        margin-bottom: 0.5em;
+	        font-family: $font-family-regular;
+	        font-weight: normal;
+	        color: $primary-blue; }
+	  }
+
       aside.wrapper {
         margin: 90px auto;
         padding-top: 1em;
         padding-bottom: 1em;
-        background-color: #084370;
+        background-color: $primary-blue;
         color: white;
       }
+
       footer {
         margin: -25px auto 45px;
       }
+
       a {
       	color: #FFF;
       }
+
       strong {
-          font-family: 'proximanova-semibold', 'Helvetica', 'Arial', sans-serif;
+          font-family: $font-family-semibold;
           font-weight: bold;
       }
+
      .hairline {
       	border: 1px solid #0a558f;
       	margin-top: 50px;
@@ -127,33 +146,36 @@
 
       /* --- buttons --- */
       .button {
-        border: 1px solid #084370;
+        border: 1px solid $primary-blue;
         box-shadow: none;
         display: inline-block;
         padding: 0.5em 1em;
         border-radius: 0.3em;
         font-size: 16px;
         font-size: 1rem;
-        font-family: 'proximanova-semibold', 'Helvetica', 'Arial', sans-serif;
+        font-family: $font-family-semibold;
         font-weight: bold;
         color: white;
-        background-color: #084370;
+        background-color: $primary-blue;
         text-decoration: none;
         text-shadow: none;
       }
+
       .button-reverse {
         background-color: white;
         border-color: white;
-        color: #084370;
+        color: $primary-blue;
       }
+
       .button-primary {
         padding: 0.8em 1.6em;
         margin: 0.6em auto;
         font-size: 18px;
         font-size: 1.125rem;
-        background-color: #E17A1B;
-        border-color: #E17A1B;
+        background-color: $highlight-orange;
+        border-color: $highlight-orange;
       }
+
       .button-secondary {
         background-color: transparent;
         border: 1px solid white;
@@ -166,24 +188,20 @@
         list-style: none;
         position: relative;
         margin: auto;
-      }
-      .button-group .button {
-        border-radius: 0;
-        border-bottom-width: 0; /* kill bottom borders on small screens */
-        margin: 0;
-        vertical-align: middle;
-        width: 100%;
-      }
-      .button-group .button:first-child {
-        border-top-left-radius: 0.3em;
-        border-top-right-radius: 0.3em;
-      }
-      .button-group .button:last-child {
-        border-bottom-left-radius: 0.3em;
-        border-bottom-right-radius: 0.3em;
-        border-bottom-width: 1px;
-      }
-
+	      .button {
+	        border-radius: 0;
+	        border-bottom-width: 0; /* kill bottom borders on small screens */
+	        margin: 0;
+	        vertical-align: middle;
+	        width: 100%; }
+	      .button:first-child {
+	        border-top-left-radius: 0.3em;
+	        border-top-right-radius: 0.3em; }
+	      .button:last-child {
+	        border-bottom-left-radius: 0.3em;
+	        border-bottom-right-radius: 0.3em;
+	        border-bottom-width: 1px; }
+	  }
       @media screen and (min-width: 43em) {
         .button-group {
           display: inline-block;
@@ -212,21 +230,18 @@
       
       img {
         max-width: 100%; /* this will make images fluid, shrinking to the width of their containers if smaller than their original size */
-      }
-      img.logo {
-        width: 450px;
-        padding: 30px 50px;
-        margin-top: 50px;
-      }
-      img.contributors {
-        margin: 20px 50px;
-      }
+     }
+	    img.logo {
+	      width: 450px;
+	      padding: 30px 50px;
+	      margin-top: 50px; }
+	    img.contributors {
+	      margin: 20px 50px; }
+	    footer img{
+	      display: inline block;
+	      width: 120px;
+	      margin: 20px; }
       
-      footer img {
-      	display: inline block;
-      	width: 120px;
-      	margin: 20px;
-      }
 
       /* --- feature grid --- */
       .feature-list {
@@ -343,7 +358,7 @@
       /* focus state for form elements */
       input:focus,
       .form-input:focus {
-        border: 1px solid #E17A1B;
+        border: 1px solid $highlight-orange;
         outline: 0;/* reset browser default */
         outline: thin dotted \9; /* fix for IE6-9 */
         box-shadow: none; /* reset browser default */
