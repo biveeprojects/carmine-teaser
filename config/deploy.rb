@@ -12,7 +12,7 @@ require 'mina/git'
 set :application_name, 'carmine-teaser'
 set :domain, 'gateway.academy'
 set :deploy_to, '/srv/www/carmine-teaser'
-set :repository, 'https://github.com/biveeprojects/carmine-teaser.git'
+set :repository, 'https://github.com/gatewayacademy/carmine-teaser.git'
 set :branch, 'master'
 
 # Optional settings:
