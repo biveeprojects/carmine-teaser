@@ -1,23 +1,23 @@
 /* colors */
-/* fonts */
+/* /fonts */
 @font-face {
   font-family: 'proximanova-regular';
-  src: url("fonts/proximanova-regular-webfont.woff2") format("woff2"), url("fonts/proximanova-regular-webfont.woff") format("woff");
+  src: url("/fonts/proximanova-regular-webfont.woff2") format("woff2"), url("/fonts/proximanova-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'proximanova-light';
-  src: url("fonts/proximanova-light-webfont.woff2") format("woff2"), url("fonts/proximanova-light-webfont.woff") format("woff");
+  src: url("/fonts/proximanova-light-webfont.woff2") format("woff2"), url("/fonts/proximanova-light-webfont.woff") format("woff");
   font-weight: 200;
   font-style: normal; }
 @font-face {
   font-family: 'proximanova-semibold';
-  src: url("fonts/proximanova-semibold-webfont.woff2") format("woff2"), url("fonts/proximanova-semibold-webfont.woff") format("woff");
+  src: url("/fonts/proximanova-semibold-webfont.woff2") format("woff2"), url("/fonts/proximanova-semibold-webfont.woff") format("woff");
   font-weight: bold;
   font-style: normal; }
 @font-face {
   font-family: 'proximanova-italic';
-  src: url("fonts/proximanova-regularit-webfont.woff2") format("woff2"), url("fonts/proximanova-regularit-webfont.woff") format("woff");
+  src: url("/fonts/proximanova-regularit-webfont.woff2") format("woff2"), url("/fonts/proximanova-regularit-webfont.woff") format("woff");
   font-weight: normal;
   font-style: italic; }
 * {
